@@ -57,6 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Customers.cs" />
+    <Compile Include="Models\Devices.cs" />
+    <Compile Include="Models\Repairs.cs" />
+    <Compile Include="Models\RepairStautsEnum.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="ServiceContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

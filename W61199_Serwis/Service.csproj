@@ -57,6 +57,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202105312040531_zer.cs" />
+    <Compile Include="Migrations\202105312040531_zer.Designer.cs">
+      <DependentUpon>202105312040531_zer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106082050067_userLogin.cs" />
+    <Compile Include="Migrations\202106082050067_userLogin.Designer.cs">
+      <DependentUpon>202106082050067_userLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106092110059_orderstatus.cs" />
+    <Compile Include="Migrations\202106092110059_orderstatus.Designer.cs">
+      <DependentUpon>202106092110059_orderstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customers.cs" />
     <Compile Include="Models\Devices.cs" />
     <Compile Include="Models\Repairs.cs" />
@@ -69,6 +82,57 @@
     <Compile Include="Services\DeviceService.cs" />
     <Compile Include="Services\RepairService.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Views\CustomerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerDialog.Designer.cs">
+      <DependentUpon>CustomerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DeviceDialog.Designer.cs">
+      <DependentUpon>DeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginDialog.Designer.cs">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RepairDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RepairDialog.Designer.cs">
+      <DependentUpon>RepairDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchDeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SearchDeviceDialog.Designer.cs">
+      <DependentUpon>SearchDeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserDialog.Designer.cs">
+      <DependentUpon>UserDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202105312040531_zer.resx">
+      <DependentUpon>202105312040531_zer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106082050067_userLogin.resx">
+      <DependentUpon>202106082050067_userLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106092110059_orderstatus.resx">
+      <DependentUpon>202106092110059_orderstatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +142,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\CustomerDialog.resx">
+      <DependentUpon>CustomerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeviceDialog.resx">
+      <DependentUpon>DeviceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginDialog.resx">
+      <DependentUpon>LoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RepairDialog.resx">
+      <DependentUpon>RepairDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchDeviceDialog.resx">
+      <DependentUpon>SearchDeviceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserDialog.resx">
+      <DependentUpon>UserDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

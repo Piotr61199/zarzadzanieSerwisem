@@ -5,6 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace W61199_Serwis.Models
 {
+	/// <summary>
+	/// SQL database model class.
+	/// Users model compatible with the database.
+	/// </summary>
 	public class Users
 	{
 		[Key]
@@ -25,6 +29,10 @@ namespace W61199_Serwis.Models
 
 		public virtual ICollection<Repairs> Repairs { get; set; }
 
+		/// <summary>
+		/// A method that confirm if actual logged user is an Admin.
+		/// </summary>
+		/// <param name="name">Name of actual logged user</param>
 		public bool isAdmin(string name)
 		{
 			if (name.ToUpper(new CultureInfo("en-US", false)) == "ADMIN")

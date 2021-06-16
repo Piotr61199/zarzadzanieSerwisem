@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace W61199_Serwis.Models
 {
+	/// <summary>
+	/// SQL database model class.
+	/// Customers model compatible with the database.
+	/// </summary>
 	public class Customers
 	{
 		[Key]

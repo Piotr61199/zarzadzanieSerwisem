@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace W61199_Serwis.Models
 {
+	/// <summary>
+	/// SQL database model class.
+	/// Repairs model compatible with the database.
+	/// </summary>
 	public class Repairs
 	{
 		[Key]

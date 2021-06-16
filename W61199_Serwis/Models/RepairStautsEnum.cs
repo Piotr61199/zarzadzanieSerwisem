@@ -18,6 +18,10 @@ public enum RepairStatus : ushort
 
 public static class EnumList
 {
+	/// <summary>
+	/// Enum model class.
+	/// Contain possible ticket repair statuses.
+	/// </summary>
 	public static IEnumerable<KeyValuePair<T, string>> Of<T>()
 	{
 		return Enum.GetValues(typeof(T))
@@ -31,6 +35,10 @@ public static class EnumList
 				.ToList();
 	}
 
+	/// <summary>
+	/// A method that retrive enum description of selected status.
+	/// </summary>
+	/// <param name="value">Selected status</param>
 	public static string GetEnumDescription(this Enum value)
 	{
 		System.Reflection.FieldInfo fi = value.GetType().GetField(value.ToString());

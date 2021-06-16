@@ -3,6 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace W61199_Serwis.Models
 {
+	/// <summary>
+	/// SQL database model class.
+	/// Devices model compatible with the database.
+	/// </summary>
 	public class Devices
 	{
 		[Key]

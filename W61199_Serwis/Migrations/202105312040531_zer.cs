@@ -40,6 +40,7 @@
                 .Index(t => t.UserId)
                 .Index(t => t.CustomerId);
             
+
             CreateTable(
                 "dbo.Devices",
                 c => new

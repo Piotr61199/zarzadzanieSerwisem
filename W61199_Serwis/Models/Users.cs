@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Globalization;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -23,5 +24,17 @@ namespace W61199_Serwis.Models
 		}
 
 		public virtual ICollection<Repairs> Repairs { get; set; }
+
+		public bool isAdmin(string name)
+		{
+			if (name.ToUpper(new CultureInfo("en-US", false)) == "ADMIN")
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			};
+		}
 	}
 }

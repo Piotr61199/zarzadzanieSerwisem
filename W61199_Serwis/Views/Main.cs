@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -48,6 +49,16 @@ namespace W61199_Serwis
 
 			label_loggedUser.Text = string.IsNullOrWhiteSpace(user.FullName) ? user.Login : user.FullName;
 
+			string name = user.Login.ToString();
+			if (name.ToUpper(new CultureInfo("en-US", false)) == "ADMIN")
+			{
+				addUser_button.Visible = true;
+			}
+			else
+            {
+				addUser_button.Visible = false;
+			};
+
 			comboBox_statusForRepair.DataSource = new BindingSource(GetStatusList(), null);
 		}
 
@@ -82,11 +93,15 @@ namespace W61199_Serwis
 
 		private void user_dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
-			var selectedUserId = Convert.ToInt32(grid_user.SelectedRows[0].Cells[0].Value);
-			UserDialog editUser = new UserDialog(selectedUserId);
-			editUser.ShowDialog();
+			string name = user.Login.ToString();
+			if (name.ToUpper(new CultureInfo("en-US", false)) == "ADMIN")
+			{
+				var selectedUserId = Convert.ToInt32(grid_user.SelectedRows[0].Cells[0].Value);
+				UserDialog editUser = new UserDialog(selectedUserId);
+				editUser.ShowDialog();
 
-			LoadUserGrid();
+				LoadUserGrid();
+			}
 		}
 
 		private void LoadUserGrid()

@@ -14,7 +14,6 @@ namespace W61199_Serwis.Views
 
 			userService = new UserService();
 			userId = _userId;
-
 		}
 
 		private readonly UserService userService;

@@ -47,9 +47,6 @@ namespace W61199_Serwis.Views
 				login_textbox.Text = "admin";
 				password_textbox.Text = "admin";
 			}
-
-
-
 		}
 	}
 }

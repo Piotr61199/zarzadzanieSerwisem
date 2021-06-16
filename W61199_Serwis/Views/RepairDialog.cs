@@ -34,11 +34,8 @@ namespace W61199_Serwis.Views
 			customer_combobox.DataSource = customerService.GetAllCustomers();
 			user_comboBox.DataSource = userService.GetAllUsers();
 
-
 			comboBox_status.DisplayMember = "Value";
 			comboBox_status.ValueMember = "Key";
-
-
 
 			comboBox_status.DataSource = new BindingSource(GetStatusList(), null);
 

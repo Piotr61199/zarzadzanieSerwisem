@@ -29,15 +29,16 @@ namespace W61199_Serwis.Views
 				Email = email_textbox.Text,
 				Address = address_textbox.Text
 			};
-			
-			if(customerId != null)
+
+			if (customerId != null)
 			{
 				customer.CustomerId = (int)customerId;
 				customerService.UpdateCustomer(customer);
 			}
 			else
-				customerService.AddNewCustomer(customer);
-
+			{ 
+			customerService.AddNewCustomer(customer);
+			}
 			this.Close();
 		}
 
